@@ -23,7 +23,7 @@ function storeGameWord() {
 
 function evaluateLetter() {
 	let userChoice = document.getElementById('pickLetterField');
-	if (!isUppercase(userChoice.value)) {							// game will only use capital letters A-to-Z
+    if (!isUppercase(userChoice.value) || userChoice.value == "") {	// game will only use capital letters A-to-Z
 		alert("Please use uppercase letters only (A to Z).");
     } else if (previousChoicesArray.includes(userChoice.value)) {	// game doesn't accept previous letter choices
 		alert('Previous choices not allowed!');
