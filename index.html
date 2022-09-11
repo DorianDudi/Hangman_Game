@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="./styles.css"/>
+    </head>
+    <body>
+        <div id="imageContainer">
+        <h1>HANGMAN</h1>
+          <img id="image" src="https://iili.io/P3qDvt.png" border="0">
+        </div>
+        <br>
+        <div id="startGameContainer">
+            <form >
+              <input type="text" id='wordField' placeholder="Enter game word...">
+              <button type="button" id='start_game' onclick='startGame()'>START GAME!</button>
+            </form>
+        </div>
+        <div id="inGameContainer" hidden >
+            <div id='wordMainDisplay'>
+            </div>
+            <div id='bottomArea'>
+                <input type="text" id='pickLetterField' maxlength='1' placeholder="Pick a letter">
+                <button type="button" id='pickLetterButton' onclick="evaluateLetter()">Go!</button>
+                <p id = previousChoices>Previous choices: </p>
+            </div>
+        </div>
+        <div id="endGameContainer" hidden>
+            <button type="button" id='newGameButton' onclick="newGame()">PLAY AGAIN!</button>
+        </div>
+        <script src="./scripts.js"></script>
+    </body>
+</html>
