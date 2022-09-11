@@ -1,0 +1,102 @@
+body {
+	background-color: white;
+	font-family: sans-serif;
+}
+
+#imageContainer {
+	border: 7px double black;
+	width: 500px;
+	height: 460px;
+	margin: 0 auto;
+}
+
+::placeholder {
+	text-align: center; 
+}
+
+#startGameContainer{
+	width: 500px;
+	margin: 0 auto;
+}
+
+#endGameContainer {
+	width: 90px;
+	margin: auto;
+}
+
+form {
+	display: grid;
+	margin-bottom: 10px;
+}
+
+input, button {
+	font-size: 20px;
+	text-align: center;
+	border-radius: 10px;
+	border: 2px solid silver;
+	margin-bottom: 5px;
+	border-right: 5px solid silver;
+	border-left: 5px solid silver;
+}
+
+input:hover, button:hover {
+	border: 2px solid lime;
+	border-radius: 10px;
+	border-right: 5px solid lime;
+	border-left: 5px solid lime;
+}
+
+input:active, button:active {
+	border: 2px solid black;
+	border-right: 5px solid black;
+	border-left: 5px solid black;
+}
+
+#inGameContainer {
+	margin: 0 auto;
+	width: 80%;
+}
+
+#wordMainDisplay {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	gap: 4px;
+	grid-auto-flow: column;
+	margin: 0 auto;
+	width: 50%;
+	height: 100px;
+}
+
+.letter-outer {
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	border-bottom: 1px solid silver;
+}
+
+.letter-inner {
+	text-align: center;
+	font-size: 3em;
+	width: 50px;
+	height: 50px;
+	background-color: lightgrey;
+	border-radius: 10%;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	background-color: black;
+	padding: 0;
+	margin: 0;
+	font-size: 50px;
+}
+
+#bottomArea {
+	width: 50%;
+	height: 100px;
+	text-align: center;
+	margin: 0 auto;
+}
