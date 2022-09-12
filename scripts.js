@@ -15,11 +15,11 @@ function storeGameWord() {
 
 function evaluateLetter() {
 	let userChoice = document.getElementById('pickLetterField');
-    if (!isUppercase(userChoice.value) || userChoice.value == "") {	// game will only use capital letters A-to-Z
+	if (!isUppercase(userChoice.value) || userChoice.value == "") {	// game will only use capital letters A-to-Z
 		alert("Please use uppercase letters only (A to Z).");
-    } else if (previousChoicesArray.includes(userChoice.value)) {	// game doesn't accept previous letter choices
+	} else if (previousChoicesArray.includes(userChoice.value)) {	// game doesn't accept previous letter choices
 		alert('Previous choices not allowed!');
-    } else {
+	} else {
 		let correctChoice = 0, allFieldsDone = 1;
 		for (let i = 0; i < gameWord.length; ++i) {					// traverse word - see if letter is present and populate all empty "fields" of that value
 			if (userChoice.value == gameWord.charAt(i)) {
@@ -39,8 +39,8 @@ function evaluateLetter() {
 			if(gameProgress == 6) {
 				document.getElementById("image").src=gameStatePictures[gameProgress]; // END GAME - USER LOST
 				playAgain();
-            }
-        }
+			}
+		}
 		if (allFieldsDone) {
 			playAgain();
 			document.getElementById("image").src='https://iili.io/PBSmEx.gif'; // END GAME - USER WON
