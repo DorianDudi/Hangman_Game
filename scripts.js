@@ -1,4 +1,4 @@
-let gameWord = "", gameProgress = 0;
+let gameWord = "", gameProgress = 0;//TEST
 const previousChoicesArray = [];
 const gameStatePictures = ['https://iili.io/PBVm1n.png', 'https://iili.io/PBVnNp.png', 'https://iili.io/PBV1xS.png', 'https://iili.io/PBVEW7.png', 'https://iili.io/PBVVfe.png', 'https://iili.io/PBVXUb.png', 'https://iili.io/PBVw5x.gif'];
 
