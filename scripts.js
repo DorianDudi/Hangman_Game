@@ -1,4 +1,4 @@
-let gameWord = "", gameProgress = 0;//TEST
+let gameWord = "", gameProgress = 0;
 const previousChoicesArray = [];
 const gameStatePictures = ['https://iili.io/PBVm1n.png', 'https://iili.io/PBVnNp.png', 'https://iili.io/PBV1xS.png', 'https://iili.io/PBVEW7.png', 'https://iili.io/PBVVfe.png', 'https://iili.io/PBVXUb.png', 'https://iili.io/PBVw5x.gif'];
 
@@ -31,9 +31,9 @@ function evaluateLetter() {
 			}
 		}
 		if (correctChoice) {
-			alert("Correct!");
+			showMessage("CORRECT");
 		} else {
-			alert("Wrong!");
+            showMessage("WRONG");
 			++gameProgress;
 			document.getElementById("image").src=gameStatePictures[gameProgress];
 			if(gameProgress == 6) {
@@ -80,10 +80,19 @@ function isUppercase(testWord) {
 }
 
 function startGame() {
-	let  userInput= document.getElementById('wordField').value;
-	if (!isUppercase(userInput) || userInput == "") {
-		alert("Please use uppercase letters only (A to Z).");
+		let  userInput= document.getElementById('wordField').value;
+		if (!isUppercase(userInput) || userInput == "") {
+		showMessage("UPPERCASE_ONLY");
 	} else {
 		storeGameWord();
 	}
+}
+
+function hideElement(elementID) {
+	document.getElementById(elementID).hidden = true;
+}
+
+function showMessage(msgID) {
+	document.getElementById(msgID).hidden = false;
+	setTimeout(hideElement, 2000, msgID);
 }
