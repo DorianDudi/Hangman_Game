@@ -80,8 +80,8 @@ function isUppercase(testWord) {
 }
 
 function startGame() {
-		let  userInput= document.getElementById('wordField').value;
-		if (!isUppercase(userInput) || userInput == "") {
+	let  userInput= document.getElementById('wordField').value;
+	if (!isUppercase(userInput) || userInput == "") {
 		showMessage("UPPERCASE_ONLY");
 	} else {
 		storeGameWord();
