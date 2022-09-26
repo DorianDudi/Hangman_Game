@@ -3,6 +3,28 @@ body {
 	font-family: sans-serif;
 }
 
+#messagesContainer {
+  position: relative;
+  width: 512px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+#messagesContainer p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 50px;
+}
+
+.message {
+    position: absolute;
+    top:0px; left:0px;
+    width: 512px;
+    height: 60px;
+    margin: 0 auto;
+}
+
 #imageContainer {
 	border: 7px double black;
 	width: 500px;

@@ -16,9 +16,9 @@ function storeGameWord() {
 function evaluateLetter() {
 	let userChoice = document.getElementById('pickLetterField');
 	if (!isUppercase(userChoice.value) || userChoice.value == "") {	// game will only use capital letters A-to-Z
-		alert("Please use uppercase letters only (A to Z).");
+		showMessage("UPPERCASE_ONLY");
 	} else if (previousChoicesArray.includes(userChoice.value)) {	// game doesn't accept previous letter choices
-		alert('Previous choices not allowed!');
+		showMessage("PREVIOUS_FORBIDDEN");
 	} else {
 		let correctChoice = 0, allFieldsDone = 1;
 		for (let i = 0; i < gameWord.length; ++i) {					// traverse word - see if letter is present and populate all empty "fields" of that value
