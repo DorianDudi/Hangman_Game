@@ -33,7 +33,7 @@ function evaluateLetter() {
 		if (correctChoice) {
 			showMessage("CORRECT");
 		} else {
-            showMessage("WRONG");
+			showMessage("WRONG");
 			++gameProgress;
 			document.getElementById("image").src=gameStatePictures[gameProgress];
 			if(gameProgress == 6) {
